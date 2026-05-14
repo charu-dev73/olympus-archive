@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Olympus Archive</title>
+
+    <style>
+
+        body{
+            background-color: black;
+            color: white;
+            font-family: Georgia, serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav{
+            margin-top: 30px;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        h1{
+            font-size: 70px;
+            letter-spacing: 6px;
+            margin: 0;
+        }
+
+        h2{
+            font-size: 30px;
+            letter-spacing: 3px;
+            color: #d6c29c;
+        }
+
+        h3{
+            font-size: 18px;
+            letter-spacing: 3px;
+            color: #d6c29c;
+        }
+
+        p{
+            width: 50%;
+            margin: auto;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #cfcfcf;
+        }
+
+        blockquote{
+            font-size: 20px;
+            font-style: italic;
+            color: #d6c29c;
+        }
+
+        .hero-image{
+            width: 260px;
+            border-radius: 10px;
+        }
+
+        .large-image{
+            width: 620px;
+            border-radius: 10px;
+        }
+
+        hr{
+            border: 0.5px solid #333;
+        }
+
+        footer{
+            color: #777;
+            padding-bottom: 40px;
+            font-size: 13px;
+        }
+
+        #music-button{
+
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+
+            background: black;
+            color: white;
+
+            border: 1px solid #555;
+
+            padding: 10px 18px;
+
+            font-family: Georgia, serif;
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            cursor: pointer;
+        }
+
+        #music-button:hover{
+
+            border-color: #d6c29c;
+            color: #d6c29c;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html">HOME</a>
+
+        <a href="gods.html">GODS</a>
+
+        <a href="myths.html">MYTHS</a>
+
+    </nav>
+
+    <br><br><br>
+
+    <!-- HERO -->
+
+    <section>
+
+        <img src="./images/greekgod.jpg"
+             alt="Greek Statue"
+             class="hero-image">
+
+        <br><br><br>
+
+        <h1>OLYMPUS</h1>
+
+        <br>
+
+        <h3>
+
+            GODS • MYTHS • LEGENDS
+
+        </h3>
+
+        <br><br>
+
+        <p>
+
+            A digital archive dedicated to Ancient Greek mythology —
+            preserving stories of gods,
+            ambition,
+            tragedy,
+            fate,
+            and the fragile nature of mortal life.
+
+        </p>
+
+        <br><br>
+
+        <blockquote>
+
+            “The gods envy us,
+            for we are mortal.”
+
+        </blockquote>
+
+    </section>
+
+    <br><br><br><br>
+
+    <hr width="65%">
+
+    <br><br><br><br>
+
+    <!-- HISTORY -->
+
+    <section>
+
+        <img src="./images/intro.jpg"
+             alt="Greek History"
+             class="large-image">
+
+        <br><br><br>
+
+        <h2>HISTORY & MYTH</h2>
+
+        <br><br>
+
+        <p>
+
+            Greek mythology was more than religion.
+
+            It was an attempt to understand
+            existence itself —
+            explaining love,
+            revenge,
+            suffering,
+            war,
+            pride,
+            destiny,
+            and mortality.
+
+        </p>
+
+        <br><br><br>
+
+        <p>
+
+            Across centuries,
+            these myths shaped philosophy,
+            literature,
+            theatre,
+            and the cultural identity
+            of the ancient world.
+
+        </p>
+
+    </section>
+
+    <br><br><br><br><br>
+
+    <hr width="55%">
+
+    <br><br><br><br>
+
+    <!-- LEGACY -->
+
+    <section>
+
+        <img src="./images/percy.jpg"
+             alt="Legacy of Olympus"
+             class="large-image">
+
+        <br><br><br>
+
+        <h2>THE LEGACY OF OLYMPUS</h2>
+
+        <br><br>
+
+        <p>
+
+            The Olympian gods reflected
+            the virtues and flaws of humanity itself.
+
+            They loved,
+            envied,
+            deceived,
+            punished,
+            desired,
+            and destroyed.
+
+        </p>
+
+        <br><br><br>
+
+        <p>
+
+            Their stories endured because
+            they revealed timeless truths
+            about human nature,
+            mortality,
+            and the struggle against fate.
+
+        </p>
+
+    </section>
+
+    <br><br><br><br>
+
+    <hr width="65%">
+
+    <br><br>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            Olympus Archive © 2026
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Inspired by Ancient Greek mythology
+
+        </p>
+
+    </footer>
+
+    <!-- MUSIC -->
+
+    <audio id="bg-music" loop>
+
+        <source src="./music/greekmusic.mp3"
+                type="audio/mpeg">
+
+    </audio>
+
+    <button onclick="toggleMusic()"
+            id="music-button">
+
+        ♫ AMBIENCE
+
+    </button>
+
+    <script>
+
+        let music = document.getElementById("bg-music");
+
+        let button = document.getElementById("music-button");
+
+        function toggleMusic(){
+
+            if(music.paused){
+
+                music.play();
+
+                button.innerHTML = "❚❚ PAUSE";
+
+            }
+
+            else{
+
+                music.pause();
+
+                button.innerHTML = "♫ AMBIENCE";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
